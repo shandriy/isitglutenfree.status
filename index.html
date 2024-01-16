@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body onload="f()">
+  <p>is it gluten free?</p>
+  <p id="s"></p>
+</body>
+<script>
+  function f() {
+    const d = new Date();
+    var n = d.getHours();
+    var t;
+    if (n % 2 == 0) {
+	    t = "yes";
+    } else {
+	    t = "no";
+    }
+    document.getElementById("s").innerHTML = t;
+  }
+</script>
+</html>

@@ -10,14 +10,15 @@
 <script>
   function f() {
     const d = new Date();
-    var n = d.getHours();
+    var n = 100;
+    n = n - d.getHours() + d.getDate() - d.getMonth() + d.getDay();
     var t;
-    if (n % 2 == 0) {
+    if (n <= 100) {
 	    t = "yes";
     } else {
 	    t = "no";
     }
-    document.getElementById("s").innerHTML = t;
+    document.getElementById("s").innerHTML = t + " (" + n + ")";
   }
 </script>
 </html>
